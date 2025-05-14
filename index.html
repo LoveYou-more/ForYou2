@@ -6,9 +6,7 @@
   <title>Kisah Cinta Kita</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Ganti tanggal jadian sesuai kamu
     const tanggalJadian = new Date('2022-06-01');
-
     function hitungHariBersama() {
       const sekarang = new Date();
       const selisih = sekarang - tanggalJadian;
@@ -17,88 +15,89 @@
       const sisaHari = hari % 30;
       document.getElementById('lamaBersama').textContent = `${bulan} bulan ${sisaHari} hari telah kulalui bersamamu, dalam peluk rasa yang tak pernah pudar.`;
     }
-
     window.onload = hitungHariBersama;
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-     body {
+    body {
       font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #ffe4e6, #fce7f3);
     }
-    h1, h2, p {
+    h1, h2, h3, p {
       font-family: 'Poppins', sans-serif;
     }
   </style>
 </head>
-<body class="bg-pink-50 font-sans">
-   <canvas id="loveCanvas" class="fixed top-0 left-0 w-full h-full z-0 pointer-events-none"></canvas>
+<body class="relative overflow-x-hidden">
+  <canvas id="loveCanvas" class="fixed top-0 left-0 w-full h-full z-0 pointer-events-none"></canvas>
 
-  <!-- Header -->
-  <header class="text-center py-10 bg-pink-200 shadow-md">
-    <h1 class="text-4xl md:text-5xl font-bold text-pink-700">Kisah Cinta Kita 💖</h1>
-    <p class="text-pink-600 mt-2 text-base md:text-lg">Setiap detik bersamamu, adalah puisi yang tak pernah usai </p>
-  </header>
+  <!-- Hero Section -->
+  <section class="relative z-10 text-center py-16 px-4 bg-gradient-to-br from-pink-100 to-pink-200 shadow-md">
+    <h1 class="text-5xl md:text-6xl font-extrabold text-pink-700 drop-shadow-sm">Kisah Cinta Kita 💖</h1>
+    <p class="mt-4 text-lg md:text-xl text-pink-600 italic">"Setiap detik bersamamu adalah puisi tak bertepi"</p>
+  </section>
 
-  <!-- Pemutar Musik -->
-  <section class="max-w-2xl mx-auto mt-8 px-4 text-center">
-    <h2 class="text-xl font-semibold text-pink-700 mb-2">Melodi Cinta Kita </h2>
-    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+  <!-- Musik Romantis -->
+  <section class="z-10 relative text-center py-10 px-4 max-w-3xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-semibold text-pink-700 mb-4">Melodi Cinta Kita</h2>
+    <div class="rounded-xl overflow-hidden shadow-lg border border-pink-300">
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
         src="https://open.spotify.com/embed/track/5nTtCOCds6I0PHMNtqelas?utm_source=generator"></iframe>
+    </div>
   </section>
 
   <!-- Waktu Bersama -->
-  <section class="max-w-2xl mx-auto mt-10 px-4 text-center">
-    <h2 class="text-xl font-semibold text-pink-700 mb-2">Waktu Kita Berdua </h2>
-    <p id="lamaBersama" class="text-pink-600 text-sm">Menghitung kenangan yang tak terhingga...</p>
+  <section class="z-10 relative text-center py-10 px-4 max-w-2xl mx-auto">
+    <h2 class="text-2xl md:text-3xl font-semibold text-pink-700 mb-3">Hari-Hari yang Telah Kita Lalui</h2>
+    <p id="lamaBersama" class="text-pink-600 text-base md:text-lg animate-pulse">Menghitung kenangan yang tak terhingga...</p>
   </section>
 
   <!-- Foto Utama -->
-  <section class="max-w-4xl mx-auto mt-10 px-4">
-    <div class="rounded-2xl overflow-hidden shadow-lg">
-      <img src="foto4.jpg" alt="Potret Cinta" class="w-full object-cover h-60 sm:h-80 md:h-[400px]" />
+  <section class="z-10 relative px-4 max-w-5xl mx-auto">
+    <div class="overflow-hidden rounded-3xl shadow-2xl border-4 border-pink-300">
+      <img src="foto4.jpg" alt="Potret Cinta" class="w-full h-80 md:h-[450px] object-cover" />
     </div>
-    <p class="text-center text-sm md:text-lg text-pink-600 mt-4">Satu potret, sejuta rasa. Di sinilah cinta itu bermuara. </p>
+    <p class="text-center text-md md:text-xl text-pink-600 mt-4 italic">Satu potret, sejuta rasa. Di sinilah cinta itu bermuara.</p>
   </section>
 
-  <!-- Galeri Foto -->
-  <section class="max-w-6xl mx-auto mt-12 px-4">
-    <h2 class="text-2xl md:text-3xl font-semibold text-pink-700 mb-6 text-center">Kenangan Indah Kita </h2>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-      <img src="foto1.jpg" class="rounded-xl object-cover w-full aspect-square" />
-      <img src="foto2.jpg" class="rounded-xl object-cover w-full aspect-square" />
-      <img src="foto3.jpg" class="rounded-xl object-cover w-full aspect-square" />
-      <img src="foto4.jpg" class="rounded-xl object-cover w-full aspect-square" />
-      <img src="foto5.jpg" class="rounded-xl object-cover w-full aspect-square" />
-      <img src="foto6.jpg" class="rounded-xl object-cover w-full aspect-square" />
+  <!-- Galeri Kenangan -->
+  <section class="z-10 relative mt-16 px-4 max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-pink-700 text-center mb-6">Galeri Kenangan Indah</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+      <img src="foto1.jpg" class="rounded-2xl object-cover w-full aspect-square shadow-md hover:scale-105 transition" />
+      <img src="foto2.jpg" class="rounded-2xl object-cover w-full aspect-square shadow-md hover:scale-105 transition" />
+      <img src="foto3.jpg" class="rounded-2xl object-cover w-full aspect-square shadow-md hover:scale-105 transition" />
+      <img src="foto4.jpg" class="rounded-2xl object-cover w-full aspect-square shadow-md hover:scale-105 transition" />
+      <img src="foto5.jpg" class="rounded-2xl object-cover w-full aspect-square shadow-md hover:scale-105 transition" />
+      <img src="foto6.jpg" class="rounded-2xl object-cover w-full aspect-square shadow-md hover:scale-105 transition" />
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center text-sm text-pink-500 mt-16 mb-4 px-2">
-    Diciptakan dengan kasih, untuk cinta yang tak lekang oleh waktu ❤️
+  <footer class="relative z-10 text-center text-pink-500 mt-20 mb-6 px-4 text-sm">
+    <p>Diciptakan dengan kasih dan HTML, untuk cinta yang tak lekang oleh waktu ❤️</p>
   </footer>
+
+  <!-- Love Animation -->
   <script>
     const canvas = document.getElementById('loveCanvas');
     const ctx = canvas.getContext('2d');
     let hearts = [];
-  
     function resizeCanvas() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
-  
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
-  
+
     function createHeart() {
       const x = Math.random() * canvas.width;
       const size = 10 + Math.random() * 10;
       const speed = 1 + Math.random() * 2;
       const opacity = 0.3 + Math.random() * 0.7;
-  
       hearts.push({ x, y: -size, size, speed, opacity });
     }
-  
+
     function drawHeart(x, y, size, opacity) {
       ctx.save();
       ctx.translate(x, y);
@@ -110,27 +109,23 @@
       ctx.bezierCurveTo(5, 5, 10, 0, 7.5, -2.5);
       ctx.bezierCurveTo(5, -5, 0, -3, 0, 0);
       ctx.closePath();
-      ctx.fillStyle = `rgba(255, 105, 180, ${opacity})`; // pink love
+      ctx.fillStyle = `rgba(255, 105, 180, ${opacity})`;
       ctx.fill();
       ctx.restore();
     }
-  
+
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       if (Math.random() < 0.3) createHeart();
-  
       for (let i = 0; i < hearts.length; i++) {
         const heart = hearts[i];
         heart.y += heart.speed;
         drawHeart(heart.x, heart.y, heart.size, heart.opacity);
         if (heart.y > canvas.height) hearts.splice(i, 1);
       }
-  
       requestAnimationFrame(animate);
     }
-  
     animate();
   </script>
-  
 </body>
 </html>
